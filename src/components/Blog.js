@@ -59,7 +59,7 @@ const Blog = ({blog, blogs, setBlogs, user, setMessage,}) => {
                 </button>
             </p>
             <p>Author: {blog.author}</p>
-            {blog.user && blog.user.id === user.id ?
+            {blog.user && blog.user.name === user.name ?
                 <button type="button"
                         onClick={handleDelete}>
                     Delete</button> :
