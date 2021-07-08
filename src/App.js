@@ -68,7 +68,7 @@ const App = () => {
                         name="Password"
                         onChange={({ target }) => setPassword(target.value)}/>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" id="loginButton">Login</button>
             </form>
         </div>
     )
@@ -84,7 +84,7 @@ const App = () => {
 
     const Message = () => {
         if (message !== null) {
-            return <div style={{ border: "2px solid" }}>{message}</div>
+            return <div style={{ border: "2px solid" }} id="message">{message}</div>
         }
         return null
     }

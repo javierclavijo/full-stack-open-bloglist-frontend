@@ -69,7 +69,7 @@ const BlogForm = ({ blogs, setBlogs, setMessage }) => {
                                     name="NewBlogURL"
                                     onChange={({ target }) => setNewBlogURL(target.value)}/>
                             </div>
-                            <button type="submit">Create</button>
+                            <button type="submit" id="createBlog">Create</button>
                         </div>
                     </form>
                 </div>

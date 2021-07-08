@@ -53,16 +53,19 @@ const Blog = ({ blog, blogs, setBlogs, user, setMessage, }) => {
             </h3>
 
             <p>URL: {blog.url}</p>
-            <p>Likes: {likes}
+            <p>Likes: <span className="numberOfLikes">{likes}</span>
                 <button type="button"
-                    onClick={handleLike}>
+                    onClick={handleLike}
+                    className="likeBlog">
                     Like
                 </button>
             </p>
             <p>Author: {blog.author}</p>
             {blog.user && blog.user.name === user.name ?
                 <button type="button"
-                    onClick={handleDelete}>
+                    onClick={handleDelete}
+                    className="deleteBlog"
+                >
                     Delete</button> :
                 null
             }
@@ -71,7 +74,7 @@ const Blog = ({ blog, blogs, setBlogs, user, setMessage, }) => {
         return (<div style={blogStyle} className="blog">
             {blog.title} {blog.author}
             <button type="button"
-                onClick={() => setShowDetail(true)}>
+                onClick={() => setShowDetail(true)} className="viewBlog">
                 View
             </button>
         </div>)
